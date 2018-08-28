@@ -13,7 +13,7 @@ install {
                 // artifactId =
                 // name =
                 // description =
-                url ootProject.ext.bintray.sitUrl
+                url rootProject.ext.bintray.sitUrl
 
                 licenses {
                     name rootProject.ext.bintray.licenseName
