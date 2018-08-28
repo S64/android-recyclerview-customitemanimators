@@ -82,23 +82,25 @@ abstract class AbsExampleActivity<VH : RecyclerView.ViewHolder> : RxAppCompatAct
             val isLast = RecyclerViewLastDetector.isLast(target)
             val flag = Random().nextInt(9 + 1)
 
+            val toastText: String
+
             when {
                 list.size > 5 && flag == 6 -> { // remove
-                    Toast.makeText(target.context, "Remove", Toast.LENGTH_SHORT).show()
+                    toastText = "Remove"
 
                     val removeIdx = (max(0, list.size - 5)..(list.size - 1)).shuffled().first()
                     list.removeAt(removeIdx)
                     notifyItemRemoved(removeIdx)
                 }
                 list.size > 5 && flag == 7 -> { // insert
-                    Toast.makeText(target.context, "Insert", Toast.LENGTH_SHORT).show()
+                    toastText = "Insert"
 
                     val insertIdx = (max(0, list.size - 5)..(list.size - 1)).shuffled().first()
                     list.add(insertIdx, UUID.randomUUID())
                     notifyItemInserted(insertIdx)
                 }
                 list.size > 5 && flag == 8 -> { // move
-                    Toast.makeText(target.context, "Move", Toast.LENGTH_SHORT).show()
+                    toastText = "Move"
 
                     val first = (max(0, list.size - 5)..(list.size - 2)).shuffled().first()
                     val value = list[first]
@@ -109,7 +111,7 @@ abstract class AbsExampleActivity<VH : RecyclerView.ViewHolder> : RxAppCompatAct
                     notifyItemMoved(first, last)
                 }
                 list.size > 5 && flag == 9 -> { // change
-                    Toast.makeText(target.context, "Change", Toast.LENGTH_SHORT).show()
+                    toastText = "Change"
 
                     val idx = (max(0, list.size - 5)..(list.size - 1)).shuffled().first()
                     list.removeAt(idx)
@@ -117,7 +119,7 @@ abstract class AbsExampleActivity<VH : RecyclerView.ViewHolder> : RxAppCompatAct
                     notifyItemChanged(idx)
                 }
                 else -> { // add
-                    Toast.makeText(target.context, "Add", Toast.LENGTH_SHORT).show()
+                    toastText = "Add"
 
                     list.add(UUID.randomUUID())
                     (list.size - 1).also {
@@ -125,6 +127,8 @@ abstract class AbsExampleActivity<VH : RecyclerView.ViewHolder> : RxAppCompatAct
                     }
                 }
             }
+
+            Toast.makeText(target.context, toastText, Toast.LENGTH_SHORT).show()
 
             if (state.autoScroll()) {
                 if (isLast) {
