@@ -29,7 +29,7 @@ buildscript {
         group: 'jp.s64.android.recyclerview.customitemanimators',
         sitUrl: 'https://github.com/S64/android-recyclerview-customitemanimators',
         licenseName: 'Apache-2.0',
-        licenseUrl: 'https://github.com/S64/android-recyclerview-customitemanimators/blob/master/LICENSE',
+        licenseUrl: 'https://raw.githubusercontent.com/S64/android-recyclerview-customitemanimators/master/LICENSE',
         developerId: 's64',
         developerName: 'Shuma Yoshioka',
         developerEmail: 's64.stdio@gmail.com',
