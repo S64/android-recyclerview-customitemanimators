@@ -2,11 +2,10 @@ package jp.s64.android.recyclerview.customitemanimators.example
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
+import org.junit.Assert.assertEquals
 
 import org.junit.Test
 import org.junit.runner.RunWith
-
-import org.junit.Assert.*
 
 /**
  * Instrumented test, which will execute on an Android device.
@@ -19,6 +18,9 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getTargetContext()
-        assertEquals("jp.s64.android.recyclerview.customitemanimators.example", appContext.packageName)
+        assertEquals(
+                "jp.s64.android.recyclerview.customitemanimators.example",
+                appContext.packageName
+        )
     }
 }
