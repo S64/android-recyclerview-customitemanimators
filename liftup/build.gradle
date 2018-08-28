@@ -74,7 +74,7 @@ install {
             project {
                 packaging 'aar'
                 groupId rootProject.ext.bintray.group
-                artifactId = 'core'
+                artifactId = 'liftup'
                 name = 'android-recyclerview-customitemanimators-liftup'
                 description = ''
                 url rootProject.ext.bintray.sitUrl
