@@ -12,7 +12,7 @@ import jp.s64.android.recyclerview.customitemanimators.util.ItemAnimatorUtils
 class FadeLiftUpExampleActivity : AbsExampleActivity<HogeAdapter.MyVH>() {
 
     override fun beforeCreate() {
-        setContentView(R.layout.common_example_activity)
+        setContentView(R.layout.bottom_padding_example_activity)
     }
 
     override fun autoScroll(): CheckBox = findViewById(R.id.autoscroll)

@@ -18,7 +18,7 @@ class PlaceAndFadeLiftUpExampleActivity : AbsExampleActivity<PlaceAndFadeLiftUpE
     }
 
     override fun beforeCreate() {
-        setContentView(R.layout.common_example_activity)
+        setContentView(R.layout.bottom_padding_example_activity)
     }
 
     override fun autoScroll(): CheckBox = findViewById(R.id.autoscroll)
