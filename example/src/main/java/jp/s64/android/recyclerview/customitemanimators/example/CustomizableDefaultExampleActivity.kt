@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import jp.s64.android.recyclerview.customitemanimators.core.CustomizableDefaultItemAnimator
 import jp.s64.android.recyclerview.customitemanimators.example.databinding.TestItemBinding
 
-class CustomizableDefaultExampleActivity : AbsExampleActivity<CustomizableDefaultExampleActivity.MyVH>() {
+class CustomizableDefaultExampleActivity : AbsExampleActivity<CustomizableDefaultExampleActivity.MyVH>() { // ktlint-disable max-line-length
 
     override fun createAdapter(state: IState): AbsAdapter<MyVH> {
         return MyAdapter(state)
