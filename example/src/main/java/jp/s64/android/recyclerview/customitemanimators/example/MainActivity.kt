@@ -13,22 +13,34 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.button_default)
                 .setOnClickListener {
-                    startActivity(Intent(this@MainActivity, CustomizableDefaultExampleActivity::class.java))
+                    startActivity(Intent(
+                            this@MainActivity,
+                            CustomizableDefaultExampleActivity::class.java
+                    ))
                 }
 
         findViewById<Button>(R.id.button_liftup)
                 .setOnClickListener {
-                    startActivity(Intent(this@MainActivity, LiftUpExampleActivity::class.java))
+                    startActivity(Intent(
+                            this@MainActivity,
+                            LiftUpExampleActivity::class.java
+                    ))
                 }
 
         findViewById<Button>(R.id.button_fade_liftup)
                 .setOnClickListener {
-                    startActivity(Intent(this@MainActivity, FadeLiftUpExampleActivity::class.java))
+                    startActivity(Intent(
+                            this@MainActivity,
+                            FadeLiftUpExampleActivity::class.java
+                    ))
                 }
 
         findViewById<Button>(R.id.button_place_fade_liftup)
                 .setOnClickListener {
-                    startActivity(Intent(this@MainActivity, PlaceAndFadeLiftUpExampleActivity::class.java))
+                    startActivity(Intent(
+                            this@MainActivity,
+                            PlaceAndFadeLiftUpExampleActivity::class.java
+                    ))
                 }
     }
 }
