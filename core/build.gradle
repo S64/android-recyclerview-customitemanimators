@@ -30,3 +30,27 @@ dependencies {
     androidTestImplementation "com.android.support.test:runner:${versions.android_test_runner}"
     androidTestImplementation "com.android.support.test.espresso:espresso-core:${versions.espresso}"
 }
+
+apply from: '../_bintray.gradle'
+
+install {
+    repositories.mavenInstaller {
+        pom {
+            project {
+                artifactId = 'android-recyclerview-customitemanimators-core'
+                name = 'android-recyclerview-customitemanimators-core'
+                description = ''
+            }
+        }
+    }
+}
+
+bintray {
+    pkg {
+        name = 'android-recyclerview-customitemanimators-core'
+        desc = ''
+        version {
+            desc = ''
+        }
+    }
+}
