@@ -11,7 +11,8 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.subjects.PublishSubject
 import jp.s64.android.recyclerview.customitemanimators.util.ItemAnimatorUtils
 import jp.s64.android.recyclerview.customitemanimators.util.RecyclerViewLastDetector
-import java.util.*
+import java.util.Random
+import java.util.UUID
 import java.util.concurrent.TimeUnit
 import kotlin.math.max
 
