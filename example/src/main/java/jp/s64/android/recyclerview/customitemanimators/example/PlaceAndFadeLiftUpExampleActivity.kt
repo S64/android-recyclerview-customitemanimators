@@ -8,7 +8,9 @@ import jp.s64.android.recyclerview.customitemanimators.liftup.PlaceAndFadeLiftUp
 
 class PlaceAndFadeLiftUpExampleActivity : AbsExampleActivity<PlaceAndFadeLiftUpExampleActivity.MyVH>() { // ktlint-disable max-line-length
 
-    override fun createAdapter(state: AbsExampleActivity.IState): AbsExampleActivity.AbsAdapter<MyVH> {
+    override fun createAdapter(
+            state: AbsExampleActivity.IState
+    ): AbsExampleActivity.AbsAdapter<MyVH> {
         return MyAdapter(state)
     }
 
