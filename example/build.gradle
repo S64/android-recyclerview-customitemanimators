@@ -45,8 +45,8 @@ dependencies {
     implementation "io.reactivex.rxjava2:rxjava:${versions.rxjava}"
     implementation "io.reactivex.rxjava2:rxandroid:${versions.rxandroid}"
 
-    implementation 'com.trello.rxlifecycle2:rxlifecycle-android:2.2.2'
-    implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.2'
+    implementation "com.trello.rxlifecycle2:rxlifecycle-android:${versions.rxlifecycle}"
+    implementation "com.trello.rxlifecycle2:rxlifecycle-components:${versions.rxlifecycle}"
 
     testImplementation 'junit:junit:4.12'
 
