@@ -18,24 +18,25 @@ import kotlin.math.max
 
 abstract class AbsExampleActivity<VH : RecyclerView.ViewHolder> : RxAppCompatActivity() {
 
-    protected lateinit var recycler: RecyclerView
-    protected lateinit var autoscroll: CheckBox
-
     protected val onClickAction: PublishSubject<Unit> = PublishSubject.create()
+
+    abstract fun recycler(): RecyclerView
+    abstract fun autoScroll(): CheckBox
+    abstract fun doAction(): Button
+
+    abstract fun beforeCreate()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.abs_example_activity)
 
-        recycler = findViewById(R.id.recycler)
-        autoscroll = findViewById(R.id.autoscroll)
+        beforeCreate()
 
         val myAdapter = createAdapter(object : IState {
 
-            override fun autoScroll(): Boolean = autoscroll.isChecked
+            override fun autoScroll(): Boolean = this@AbsExampleActivity.autoScroll().isChecked
         })
 
-        recycler.apply {
+        recycler().apply {
             this.layoutManager = LinearLayoutManager(
                     this@AbsExampleActivity,
                     LinearLayoutManager.VERTICAL,
@@ -45,20 +46,20 @@ abstract class AbsExampleActivity<VH : RecyclerView.ViewHolder> : RxAppCompatAct
             this.itemAnimator = createItemAnimator()
         }
 
-        findViewById<Button>(R.id.do_action)
+        doAction()
                 .setOnClickListener {
                     onClickAction.onNext(Unit)
                 }
 
         onClickAction
                 .throttleFirst(
-                        ItemAnimatorUtils.maxSingleDuration(recycler.itemAnimator),
+                        ItemAnimatorUtils.maxSingleDuration(recycler().itemAnimator),
                         TimeUnit.MILLISECONDS
                 )
                 .compose(bindToLifecycle())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe {
-                    myAdapter.actionRandom(recycler)
+                    myAdapter.actionRandom(recycler())
                 }
     }
 

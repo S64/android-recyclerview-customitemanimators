@@ -3,6 +3,8 @@ package jp.s64.android.recyclerview.customitemanimators.example
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.CheckBox
 import jp.s64.android.recyclerview.customitemanimators.example.databinding.TestItemBinding
 import jp.s64.android.recyclerview.customitemanimators.liftup.LiftUpItemAnimator
 
@@ -13,8 +15,18 @@ class LiftUpExampleActivity : AbsExampleActivity<LiftUpExampleActivity.MyVH>() {
     }
 
     override fun createItemAnimator(): RecyclerView.ItemAnimator {
-        return LiftUpItemAnimator(recycler)
+        return LiftUpItemAnimator(recycler())
     }
+
+    override fun beforeCreate() {
+        setContentView(R.layout.common_example_activity)
+    }
+
+    override fun autoScroll(): CheckBox = findViewById(R.id.autoscroll)
+
+    override fun doAction(): Button = findViewById(R.id.do_action)
+
+    override fun recycler(): RecyclerView = findViewById(R.id.recycler)
 
     class MyAdapter(
         override val state: AbsExampleActivity.IState
