@@ -42,5 +42,13 @@ class MainActivity : AppCompatActivity() {
                             PlaceAndFadeLiftUpExampleActivity::class.java
                     ))
                 }
+
+        findViewById<Button>(R.id.compare)
+                .setOnClickListener {
+                    startActivity(Intent(
+                            this@MainActivity,
+                            CompareActivity::class.java
+                    ))
+                }
     }
 }

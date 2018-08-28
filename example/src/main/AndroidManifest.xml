@@ -23,6 +23,11 @@
         <activity android:name=".LiftUpExampleActivity"/>
         <activity android:name=".PlaceAndFadeLiftUpExampleActivity"/>
 
+        <activity
+            android:name=".CompareActivity"
+            android:screenOrientation="landscape"
+            />
+
     </application>
 
 </manifest>

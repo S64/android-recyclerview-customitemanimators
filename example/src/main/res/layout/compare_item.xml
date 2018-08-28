@@ -6,12 +6,8 @@
     <data>
 
         <variable
-            name="item"
-            type="String"/>
-
-        <variable
-            name="itemIndex"
-            type="Integer"/>
+            name="uuid"
+            type="java.util.UUID"/>
 
     </data>
 
@@ -31,22 +27,19 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@{&quot;Item: &quot; + item}"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/textView"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="Index: ???" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@{&quot;(Index: &quot; + itemIndex + &quot;)&quot;}"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="@{uuid.toString()}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="(Index: ???)" />
+            tools:text="UUID" />
 
     </android.support.constraint.ConstraintLayout>
 
