@@ -55,6 +55,7 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url 'http://dl.bintray.com/s64/maven' }
     }
 
     apply plugin: 'org.jlleitschuh.gradle.ktlint'
