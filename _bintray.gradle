@@ -43,7 +43,7 @@ bintray {
     user = properties.getProperty('bintray.user')
     key = properties.getProperty('bintray.apikey')
 
-    configurations ['archives']
+    configurations = ['archives']
 
     pkg {
         repo = rootProject.ext.bintray.repository
