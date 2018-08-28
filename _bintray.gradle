@@ -86,5 +86,7 @@ artifacts {
 }
 
 def localProperties() {
-    return new Properties(project.rootProject.file('local.properties').newDataInputStream())
+    Properties ret = new Properties()
+    ret.load(project.rootProject.file('local.properties').newDataInputStream())
+    return ret
 }
