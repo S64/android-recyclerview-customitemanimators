@@ -4,9 +4,7 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 27
-
-
+    compileSdkVersion product.compileSdkVersion
 
     defaultConfig {
         applicationId "jp.s64.android.recyclerview.customitemanimators.example"
