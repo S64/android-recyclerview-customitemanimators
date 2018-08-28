@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.CheckBox
 import jp.s64.android.recyclerview.customitemanimators.core.CustomizableDefaultItemAnimator
 import jp.s64.android.recyclerview.customitemanimators.example.databinding.TestItemBinding
+import jp.s64.android.recyclerview.customitemanimators.util.ItemAnimatorUtils
 
 class CustomizableDefaultExampleActivity : AbsExampleActivity<CustomizableDefaultExampleActivity.MyVH>() { // ktlint-disable max-line-length
 
@@ -27,6 +28,10 @@ class CustomizableDefaultExampleActivity : AbsExampleActivity<CustomizableDefaul
     override fun doAction(): Button = findViewById(R.id.do_action)
 
     override fun recycler(): RecyclerView = findViewById(R.id.recycler)
+
+    override fun maxDuration(): Long {
+        return ItemAnimatorUtils.maxDuration(recycler().itemAnimator)
+    }
 
     class MyAdapter(
         override val state: AbsExampleActivity.IState

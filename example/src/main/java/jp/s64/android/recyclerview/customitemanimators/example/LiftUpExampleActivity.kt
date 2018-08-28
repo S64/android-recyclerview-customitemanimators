@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.CheckBox
 import jp.s64.android.recyclerview.customitemanimators.example.databinding.TestItemBinding
 import jp.s64.android.recyclerview.customitemanimators.liftup.LiftUpItemAnimator
+import jp.s64.android.recyclerview.customitemanimators.util.ItemAnimatorUtils
 
 class LiftUpExampleActivity : AbsExampleActivity<LiftUpExampleActivity.MyVH>() {
 
@@ -27,6 +28,10 @@ class LiftUpExampleActivity : AbsExampleActivity<LiftUpExampleActivity.MyVH>() {
     override fun doAction(): Button = findViewById(R.id.do_action)
 
     override fun recycler(): RecyclerView = findViewById(R.id.recycler)
+
+    override fun maxDuration(): Long {
+        return ItemAnimatorUtils.maxSingleDuration(recycler().itemAnimator)
+    }
 
     class MyAdapter(
         override val state: AbsExampleActivity.IState

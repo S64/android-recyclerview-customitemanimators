@@ -26,6 +26,8 @@ abstract class AbsExampleActivity<VH : RecyclerView.ViewHolder> : RxAppCompatAct
 
     abstract fun beforeCreate()
 
+    abstract fun maxDuration(): Long
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -53,7 +55,7 @@ abstract class AbsExampleActivity<VH : RecyclerView.ViewHolder> : RxAppCompatAct
 
         onClickAction
                 .throttleFirst(
-                        ItemAnimatorUtils.maxSingleDuration(recycler().itemAnimator),
+                        maxDuration(),
                         TimeUnit.MILLISECONDS
                 )
                 .compose(bindToLifecycle())

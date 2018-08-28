@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.CheckBox
 import jp.s64.android.recyclerview.customitemanimators.example.databinding.TestItemBinding
 import jp.s64.android.recyclerview.customitemanimators.liftup.PlaceAndFadeLiftUpItemAnimator
+import jp.s64.android.recyclerview.customitemanimators.util.ItemAnimatorUtils
 
 class PlaceAndFadeLiftUpExampleActivity : AbsExampleActivity<PlaceAndFadeLiftUpExampleActivity.MyVH>() { // ktlint-disable max-line-length
 
@@ -28,6 +29,10 @@ class PlaceAndFadeLiftUpExampleActivity : AbsExampleActivity<PlaceAndFadeLiftUpE
 
     override fun createItemAnimator(): RecyclerView.ItemAnimator {
         return PlaceAndFadeLiftUpItemAnimator(recycler())
+    }
+
+    override fun maxDuration(): Long {
+        return ItemAnimatorUtils.maxSingleDuration(recycler().itemAnimator)
     }
 
     class MyAdapter(
