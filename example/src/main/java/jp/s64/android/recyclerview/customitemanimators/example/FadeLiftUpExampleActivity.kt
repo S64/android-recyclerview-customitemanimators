@@ -15,11 +15,10 @@ class FadeLiftUpExampleActivity : AbsExampleActivity<HogeAdapter.MyVH>() {
     override fun createItemAnimator(): RecyclerView.ItemAnimator {
         return FadeLiftUpItemAnimator(recycler)
     }
-
 }
 
 class HogeAdapter(
-        override val state: AbsExampleActivity.IState
+    override val state: AbsExampleActivity.IState
 ) : AbsExampleActivity.AbsAdapter<HogeAdapter.MyVH>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyVH {
@@ -32,5 +31,4 @@ class HogeAdapter(
     }
 
     class MyVH(val binding: TestItemBinding) : RecyclerView.ViewHolder(binding.root)
-
 }

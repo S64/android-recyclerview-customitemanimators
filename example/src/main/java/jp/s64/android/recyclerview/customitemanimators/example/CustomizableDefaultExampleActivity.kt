@@ -17,7 +17,7 @@ class CustomizableDefaultExampleActivity : AbsExampleActivity<CustomizableDefaul
     }
 
     class MyAdapter(
-            override val state: AbsExampleActivity.IState
+        override val state: AbsExampleActivity.IState
     ) : AbsExampleActivity.AbsAdapter<MyVH>() {
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyVH {
@@ -31,5 +31,4 @@ class CustomizableDefaultExampleActivity : AbsExampleActivity<CustomizableDefaul
     }
 
     class MyVH(val binding: TestItemBinding) : RecyclerView.ViewHolder(binding.root)
-
 }

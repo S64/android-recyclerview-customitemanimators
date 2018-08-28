@@ -3,12 +3,10 @@ package jp.s64.android.recyclerview.customitemanimators.example
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
-import android.util.Log
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.Toast
 import com.trello.rxlifecycle2.components.support.RxAppCompatActivity
-import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.subjects.PublishSubject
 import jp.s64.android.recyclerview.customitemanimators.util.ItemAnimatorUtils
@@ -34,7 +32,6 @@ abstract class AbsExampleActivity<VH : RecyclerView.ViewHolder> : RxAppCompatAct
         val myAdapter = createAdapter(object : IState {
 
             override fun autoScroll(): Boolean = autoscroll.isChecked
-
         })
 
         recycler.apply {
@@ -70,7 +67,6 @@ abstract class AbsExampleActivity<VH : RecyclerView.ViewHolder> : RxAppCompatAct
     interface IState {
 
         fun autoScroll(): Boolean
-
     }
 
     abstract class AbsAdapter<VH : RecyclerView.ViewHolder> : RecyclerView.Adapter<VH>() {
@@ -136,7 +132,5 @@ abstract class AbsExampleActivity<VH : RecyclerView.ViewHolder> : RxAppCompatAct
         }
 
         override fun getItemCount(): Int = list.size
-
     }
-
 }

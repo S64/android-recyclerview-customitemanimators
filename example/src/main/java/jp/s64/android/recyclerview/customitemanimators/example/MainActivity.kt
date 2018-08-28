@@ -31,5 +31,4 @@ class MainActivity : AppCompatActivity() {
                     startActivity(Intent(this@MainActivity, PlaceAndFadeLiftUpExampleActivity::class.java))
                 }
     }
-
 }
