@@ -51,7 +51,7 @@ bintray {
         // desc =
         websiteUrl = rootProject.ext.bintray.siteUrl
         issueTrackerUrl = rootProject.ext.bintray.issuesUrl
-        vscUrl = rootProject.ext.bintray.gitUrl
+        vcsUrl = rootProject.ext.bintray.gitUrl
         licenses = rootProject.ext.bintray.licenses
         labels = rootProject.ext.bintray.labels
         publish = false
