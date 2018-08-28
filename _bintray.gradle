@@ -41,7 +41,7 @@ Properties properties = localProperties()
 
 bintray {
     user = properties.getProperty('bintray.user')
-    key = properties.getProperty('bintray.apikey')
+    key = properties.getProperty('bintray.api_key')
 
     configurations = ['archives']
 
