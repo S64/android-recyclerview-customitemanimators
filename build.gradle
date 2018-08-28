@@ -10,7 +10,8 @@ buildscript {
         rxlifecycle: '2.2.2',
         junit: '4.12',
         android_test_runner: '1.0.2',
-        espresso: '3.0.2'
+        espresso: '3.0.2',
+        constraint_layout: '1.1.2'
     ]
 
     ext.product = [
