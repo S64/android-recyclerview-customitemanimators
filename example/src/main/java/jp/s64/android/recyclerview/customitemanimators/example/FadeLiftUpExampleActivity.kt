@@ -26,7 +26,7 @@ class FadeLiftUpExampleActivity : AbsExampleActivity<HogeAdapter.MyVH>() {
     }
 
     override fun createItemAnimator(): RecyclerView.ItemAnimator {
-        return FadeLiftUpItemAnimator(recycler())
+        return FadeLiftUpItemAnimator(recycler(), 200)
     }
 
     override fun maxDuration(): Long {

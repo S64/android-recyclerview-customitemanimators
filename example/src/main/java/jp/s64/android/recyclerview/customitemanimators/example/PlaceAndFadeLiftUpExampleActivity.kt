@@ -28,7 +28,7 @@ class PlaceAndFadeLiftUpExampleActivity : AbsExampleActivity<PlaceAndFadeLiftUpE
     override fun recycler(): RecyclerView = findViewById(R.id.recycler)
 
     override fun createItemAnimator(): RecyclerView.ItemAnimator {
-        return PlaceAndFadeLiftUpItemAnimator(recycler())
+        return PlaceAndFadeLiftUpItemAnimator(recycler(), 200)
     }
 
     override fun maxDuration(): Long {
