@@ -23,7 +23,7 @@ android {
 }
 
 dependencies {
-    implementation project(path: ':core')
+    implementation "jp.s64.android.recyclerview.customitemanimators:core:${product.versionName}"
 
     implementation "com.android.support:recyclerview-v7:${versions.android_support}"
 
