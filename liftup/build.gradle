@@ -32,27 +32,3 @@ dependencies {
     androidTestImplementation "com.android.support.test:runner:${versions.android_test_runner}"
     androidTestImplementation "com.android.support.test.espresso:espresso-core:${versions.espresso}"
 }
-
-apply from: '../_bintray.gradle'
-
-install {
-    repositories.mavenInstaller {
-        pom {
-            project {
-                artifactId = 'android-recyclerview-customitemanimators-liftup'
-                name = 'android-recyclerview-customitemanimators-liftup'
-                description = ''
-            }
-        }
-    }
-}
-
-bintray {
-    pkg {
-        name = 'android-recyclerview-customitemanimators-liftup'
-        desc = ''
-        version {
-            desc = ''
-        }
-    }
-}
