@@ -17,7 +17,8 @@ buildscript {
         versionCode: 1,
         versionName: '0.0.1',
         compileSdkVersion: 27,
-        targetSdkVersion: 27
+        targetSdkVersion: 27,
+        minSdkVersion: 19
     ]
 
     repositories {

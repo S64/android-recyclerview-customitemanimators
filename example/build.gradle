@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "jp.s64.android.recyclerview.customitemanimators.example"
-        minSdkVersion 19
+        minSdkVersion product.minSdkVersion
         targetSdkVersion product.targetSdkVersion
         versionCode product.versionCode
         versionName product.versionName
