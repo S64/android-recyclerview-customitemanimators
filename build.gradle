@@ -21,6 +21,21 @@ buildscript {
         minSdkVersion: 19
     ]
 
+    ext.bintray = [
+        repository: 'maven',
+        licenses: ['Apache-2.0'],
+        labels: ['java', 'aar', 'android'],
+        group: 'jp.s64.android.recyclerview.customitemanimators',
+        sitUrl: 'https://github.com/S64/android-recyclerview-customitemanimators',
+        licenseName: 'Apache-2.0',
+        licenseUrl: 'https://github.com/S64/android-recyclerview-customitemanimators/blob/master/LICENSE',
+        developerId: 's64',
+        developerName: 'Shuma Yoshioka',
+        developerEmail: 's64.stdio@gmail.com',
+        gitUrl: 'https://github.com/S64/android-recyclerview-customitemanimators',
+        siteUrl: 'https://github.com/S64/android-recyclerview-customitemanimators'
+    ]
+
     repositories {
         google()
         jcenter()
