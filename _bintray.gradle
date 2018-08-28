@@ -59,7 +59,7 @@ bintray {
         userOrg = rootProject.ext.bintray.userOrg
 
         version {
-            // name =
+            name = rootProject.ext.product.versionName
             // desc =
             vcsTag = rootProject.ext.product.versionName
         }
