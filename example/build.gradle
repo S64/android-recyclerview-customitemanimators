@@ -48,7 +48,7 @@ dependencies {
     implementation "com.trello.rxlifecycle2:rxlifecycle-android:${versions.rxlifecycle}"
     implementation "com.trello.rxlifecycle2:rxlifecycle-components:${versions.rxlifecycle}"
 
-    testImplementation 'junit:junit:4.12'
+    testImplementation "junit:junit:${versions.junit}"
 
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
