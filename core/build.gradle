@@ -29,6 +29,6 @@ dependencies {
 
     testImplementation "junit:junit:${versions.junit}"
 
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation "com.android.support.test:runner:${versions.android_test_runner}"
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
