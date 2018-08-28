@@ -24,6 +24,7 @@ android {
 
 dependencies {
     implementation "com.android.support:recyclerview-v7:${versions.android_support}"
+    implementation "com.android.support:support-annotations:${versions.android_support}"
 
     testImplementation "junit:junit:${versions.junit}"
 
