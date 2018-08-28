@@ -18,4 +18,11 @@ public class ItemAnimatorUtils {
         );
     }
 
+    public static long maxDuration(@NonNull RecyclerView.ItemAnimator animator) {
+        return Math.max(
+                maxSingleDuration(animator),
+                animator.getMoveDuration() + animator.getAddDuration()
+        );
+    }
+
 }
